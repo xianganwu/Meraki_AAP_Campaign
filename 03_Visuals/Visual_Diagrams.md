@@ -9,10 +9,10 @@ graph TD
     style User fill:#f9f,stroke:#333,stroke-width:2px
 
     subgraph "The Silos of Pain"
-        MD[Meraki Dashboard]
-        CLI[Switch CLI (SSH)]
-        Cloud[AWS/Azure Console]
-        spreadsheet[Excel IP Tracker]
+        MD["Meraki Dashboard"]
+        CLI["Switch CLI (SSH)"]
+        Cloud["AWS/Azure Console"]
+        spreadsheet["Excel IP Tracker"]
     end
 
     User -- "Click, Click, Click (Manual)" --> MD
@@ -20,8 +20,8 @@ graph TD
     User -- "Manual Route Tables" --> Cloud
     User -- "Update Manually" --> spreadsheet
 
-    MD -- "Config Drift" --> Branch[Branch Office]
-    CLI -- "VLAN Check?" --> Core[Data Center]
+    MD -- "Config Drift" --> Branch["Branch Office"]
+    CLI -- "VLAN Check?" --> Core["Data Center"]
     
     style MD fill:#ffcccc,stroke:#f00
     style CLI fill:#ffcccc,stroke:#f00
@@ -46,9 +46,9 @@ graph TD
     end
     
     subgraph "Managed Infrastructure"
-        Meraki[Meraki Cloud]
-        Core[Cisco IOS-XE Core]
-        Cloud[AWS Transit Gateway]
+        Meraki["Meraki Cloud"]
+        Core["Cisco IOS-XE Core"]
+        Cloud["AWS Transit Gateway"]
     end
 
     User -- "Push Code (Git)" --> AAP
